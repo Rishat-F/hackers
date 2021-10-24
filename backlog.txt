@@ -1,0 +1,18 @@
+# Here are the tasks to do
+
+Easy tasks:
+    1) Create file with explanations of hackers slang
+    2) Start to fill hints files
+    3) Fill README.md file
+    4) Input text in files with `cat`, `echo` and other commands
+    5) Solve the issue of running Gedit in WSL2
+
+Normal tasks:
+    1) Figure out with russian text in files like "¿¿¿¿¿¿¿ ¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿ ¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿" in Vim editor
+    2) How to print the changes maked in certain commit
+    3) Figure out with file .git/description in repository
+    4) Adding text not to the new line but to the end of existing line of file with `echo` command
+    5) Set the prompt format
+
+Hard tasks:
+
