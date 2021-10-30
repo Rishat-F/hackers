@@ -12,6 +12,9 @@
 
 Задачи средней сложности:
     1) Разобраться с отображением русского текста в файлах в текстовом редакторе Vim в WSL2
+    2) Ошибка при вводе команды git add:
+    "Warning: LF will be replaced by CRLF in exercise4.txt.
+    The file will have its original line endings in your working directory"
 
 
 Сложные задачи:
