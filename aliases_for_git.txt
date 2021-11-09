@@ -1,0 +1,39 @@
+   Можно настроить псевдонимы (alias) для любой команды с помощью git config.
+Например:
+
+	$ git config --global alias.co checkout
+	$ git config --global alias.br branch
+	$ git config --global alias.ci commit
+	$ git config --global alias.st status
+
+В итоге вместо команды git checkout можно будет использовать git co и т.д.
+
+   Такой способ может также быть полезен для создания команд, которые, как вы думаете, должны существовать. Например, чтобы исправить неудобство, с которым мы столкнулись при исключении файла из индекса, можно добавить в Git свой собственный псевдоним unstage:
+
+	$ git config --global alias.unstage 'reset HEAD --'
+
+Это делает эквивалентными следующие две команды:
+
+	$ git unstage fileA
+	$ git reset HEAD -- fileA
+
+   Такой вариант кажется немного более понятным. Также, обычно, добавляют команду last следующим образом:
+
+	$ git config --global alias.last 'log -1 HEAD'
+
+Таким образом, можно легко просмотреть последний коммит:
+
+	$ git last
+	commit 66938dae3329c7aebe598c2246a8e6af90d04646
+	Author: Josh Goebel <dreamer3@example.com>
+	Date:   Tue Aug 26 19:48:51 2008 +0800
+
+	    Test for current head
+
+	    Signed-off-by: Scott Chacon <schacon@example.com>
+
+   Можно сказать, что Git просто заменяет эти команды на созданные вами псевдонимы (alias). Однако, возможно, вы захотите выполнить внешнюю команду, а не подкоманду Git. В этом случае, следует начать команду с символа !. Это полезно, если вы пишете свои утилиты для работы с Git-репозиторием. Продемонстрируем этот случай на примере создания псевдонима git visual для запуска gitk:
+
+	$ git config --global alias.visual '!gitk'
+
+
