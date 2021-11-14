@@ -1,0 +1,27 @@
+Можно настроить псевдонимы (alias) для любой команды с помощью git config.
+    Например:
+
+	$ git config --global alias.co checkout
+	$ git config --global alias.br branch
+	$ git config --global alias.ci commit
+	$ git config --global alias.st status
+
+    В итоге вместо команды git checkout можно будет использовать git co и т.д.
+
+Такой способ может также быть полезен для создания команд, которые, как вы думаете, должны существовать. Например, можно добавить команду last для просмотра последнего коммита:
+
+	$ git config --global alias.last 'log -1 HEAD'
+
+    Выведется информация по последнему коммиту:
+
+	$ git last
+	commit 66938dae3329c7aebe598c2246a8e6af90d04646
+	Author: Josh Goebel <dreamer3@example.com>
+	Date:   Tue Aug 26 19:48:51 2008 +0800
+
+	    Test for current head
+
+	    Signed-off-by: Scott Chacon <schacon@example.com>
+
+Можно сказать, что Git просто заменяет эти команды на созданные вами псевдонимы (alias).
+
